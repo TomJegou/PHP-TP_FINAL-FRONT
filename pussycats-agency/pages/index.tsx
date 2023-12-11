@@ -1,7 +1,11 @@
+import { motion } from "framer-motion"
+
 export default function Home() {
   return (
     <div>
-      test
+      <motion.div>
+        
+      </motion.div>
     </div>
   )
 }
