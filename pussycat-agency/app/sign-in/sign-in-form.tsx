@@ -6,7 +6,7 @@ export default function LoginForm() {
             <h2 className="text-3xl font-bold">Se connecter</h2>
             <div className="w-full flex flex-col justify-center items-center gap-5">
                 <div className="wrapper-input-text-login">
-                    <label>identifiant</label>
+                    <label>Adresse mail</label>
                     <input type="text" className="input-text-login" />
                 </div>
                 <div className="wrapper-input-text-login">    
