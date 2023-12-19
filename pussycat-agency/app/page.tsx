@@ -1,7 +1,9 @@
+import LoginForm from "./login-form"
+
 export default function Home() {
   return (
-    <main className="">
-     
+    <main>
+      <LoginForm />
     </main>
   )
 }
