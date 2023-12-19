@@ -19,7 +19,7 @@ export default function SignUpForm() {
                 className="submit-button-login bg-plum p-4 rounded-lg w-[30vw] max-w-[200px] flex flex-col justify-center items-center cursor-pointer"
                 value="valider"
             />
-            <Link href={"/"} className="hover:underline">Possède un compte</Link>
+            <Link href={"/sign-in"} className="hover:underline">Possède un compte</Link>
         </form>
     )
 }
