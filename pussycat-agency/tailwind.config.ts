@@ -6,10 +6,12 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  colors: {
-    'blue': '#1a13f0',
-    'font-white': 'efeffd',
-    'black' : '1e1c1c',
+  theme: {
+    colors: {
+      'outer-space': '#464f51',
+      'aquamarine': '#0ff4c6',
+      'plum': '#d68fd6',
+    },
   },
   plugins: [],
 }
