@@ -7,15 +7,15 @@ export default function SignUpForm() {
             <div className="w-full flex flex-col justify-center items-center gap-5">
                 <div className="wrapper-input-text-login">
                     <label>Pseudonyme</label>
-                    <input type="text" className="input-text-login" />
+                    <input type="text" className="input-text-login" name="name" />
                 </div>
                 <div className="wrapper-input-text-login">
                     <label>Adresse mail</label>
-                    <input type="text" className="input-text-login" />
+                    <input type="text" className="input-text-login" name="email" />
                 </div>
                 <div className="wrapper-input-text-login">    
                     <label>Mot de passe</label>
-                    <input type="text" className="input-text-login" />
+                    <input type="text" className="input-text-login" name="password" />
                 </div>
             </div>
             <input
