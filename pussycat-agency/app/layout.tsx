@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='bg-outer-space flex flex-wrap flex-col justify-center items-center min-h-screen'>{children}</body>
     </html>
   )
 }
