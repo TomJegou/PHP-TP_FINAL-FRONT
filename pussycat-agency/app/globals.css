@@ -23,10 +23,14 @@
     align-items: center;
 }
 
-.submit-button-login {
+.button {
     transition: transform 0.3s ease;
 }
 
-.submit-button-login:hover {
+.button:hover {
     transform: scale(0.95);
+}
+
+.home-title {
+    text-shadow: 0 0 10px #161414, 0 0 10px #161414, 0 0 10px #161414;
 }
