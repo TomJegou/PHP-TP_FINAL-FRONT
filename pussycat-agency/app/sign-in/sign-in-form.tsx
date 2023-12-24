@@ -16,7 +16,7 @@ export default function LoginForm() {
             </div>
             <input
                 type="submit"
-                className="button bg-plum p-4 rounded-lg w-[30vw] max-w-[200px] flex flex-col justify-center items-center cursor-pointer"
+                className="button bg-plum p-4 rounded-lg w-[30vw] max-w-[200px] flex flex-col justify-center items-center cursor-pointer border-[3px] border-solid"
                 value="valider"
             />
             <Link href={"/sign-up"} className="hover:underline">Créer un compte</Link>
