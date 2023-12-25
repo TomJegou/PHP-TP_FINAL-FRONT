@@ -6,8 +6,12 @@ export default function SignUpForm() {
             <h2 className="text-3xl font-bold">Créer un compte</h2>
             <div className="w-full flex flex-col justify-center items-center gap-5">
                 <div className="wrapper-input-text-login">
-                    <label>Pseudonyme</label>
-                    <input type="text" className="input-text-login" name="name" />
+                    <label>Nom</label>
+                    <input type="text" className="input-text-login" name="lastname" />
+                </div>
+                <div className="wrapper-input-text-login">
+                    <label>Prénom</label>
+                    <input type="text" className="input-text-login" name="firstname" />
                 </div>
                 <div className="wrapper-input-text-login">
                     <label>Adresse mail</label>
