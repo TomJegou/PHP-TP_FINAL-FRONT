@@ -1,4 +1,4 @@
-export default function Dashboard() {
+export default function Dashboard({ params }: { params: { id: number } }) {
     return (
         <div>
             <h1
@@ -6,6 +6,7 @@ export default function Dashboard() {
             >
                 Dashboard
             </h1>
+            <p>{params.id}</p>
         </div>
     )
 }
