@@ -3,9 +3,9 @@ import HomeButton from "../home-button"
 
 export default function SignIn() {
   return (
-    <main>
+    <div>
       <HomeButton />
       <LoginForm />
-    </main>
+    </div>
   )
 }

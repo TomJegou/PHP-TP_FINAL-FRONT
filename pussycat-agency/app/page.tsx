@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Home() {
     return(
-        <main className="flex flex-wrap flex-col justify-center items-center gap-[10vh]">
+        <div className="flex flex-wrap flex-col justify-center items-center gap-[10vh]">
             <h1
                 className="home-title text-aquamarine text-7xl"
             >
@@ -26,6 +26,6 @@ export default function Home() {
                         s'enregister
                 </Link>
             </div>
-        </main>
+        </div>
     )
 }
