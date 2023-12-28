@@ -1,0 +1,7 @@
+FROM tomyj/my-env:node
+WORKDIR /app
+COPY package-lock.json .
+COPY package.json .
+RUN npm ci
+RUN npm run build
+CMD [ "npm", "run", "start", "-p", "8080" ]

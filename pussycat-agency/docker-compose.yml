@@ -1,0 +1,9 @@
+services:
+  front:
+    container_name: PHP-FINAL-front
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
