@@ -4,5 +4,6 @@ COPY package-lock.json .
 COPY package.json .
 RUN npm ci
 COPY . .
-RUN npm run build
-CMD [ "npx", "next", "start", "-p", "8080", ]
+RUN npx next build
+ENV PORT=8080
+CMD [ "npx", "next", "start" ]
