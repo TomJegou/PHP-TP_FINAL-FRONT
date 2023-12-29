@@ -11,6 +11,8 @@ const config: Config = {
       'outer-space': '#464f51',
       'aquamarine': '#0ff4c6',
       'plum': '#d68fd6',
+      'azure': '#F1FDFF',
+      'dark': '#080808',
     },
   },
   plugins: [],
