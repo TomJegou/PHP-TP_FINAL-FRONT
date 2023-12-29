@@ -1,5 +1,6 @@
 services:
   front:
+    image: tomyj/tp-php-front
     container_name: PHP-FINAL-front
     build:
       context: .
