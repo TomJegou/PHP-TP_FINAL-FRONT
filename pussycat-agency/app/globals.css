@@ -34,3 +34,11 @@
 .home-title {
     text-shadow: 0 0 10px #161414, 0 0 10px #161414, 0 0 10px #161414;
 }
+
+.card-hero {
+    transition: transform 0.3s ease;
+}
+
+.card-hero:hover {
+    transform: scale(1.20);
+}

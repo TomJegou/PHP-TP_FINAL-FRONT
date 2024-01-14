@@ -12,7 +12,7 @@ export default function HeroCard({
 }) {
     return (
         <Link
-            className="bg-plum w-[155px] h-[150px] rounded-lg flex flex-col justify-center items-center"
+            className="card-hero bg-plum w-[155px] h-[150px] rounded-lg flex flex-col justify-center items-center"
             href={`/dashboard/hero/${index}`}
         >
             <p
