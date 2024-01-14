@@ -21,7 +21,7 @@ export default async function Dashboard () {
     const data = await getHeroes()
     return (
         <div
-            className="flex flex-row flex-wrap justify-start items-center gap-4"
+            className="flex flex-row flex-wrap justify-start items-center gap-9"
         >
             {
                 data.data.map((hero : {"name": string, "description": string}, index : number) => (
