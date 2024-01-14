@@ -1,4 +1,5 @@
 import HeroCard from "./hero"
+import Link from "next/link"
 
 async function getHeroes() {
     let apiHostname = "localhost:8000" 
@@ -23,7 +24,27 @@ export default async function Dashboard () {
         <div
             className="flex flex-col flex-wrap justify-start items-center gap-9"
         >
-            <h1 className="text-5xl text-aquamarine">Choisissez un hero</h1>
+            <div className="bg-plum w-[100vw] h-24 flex flex-row flex-wrap justify-center items-center gap-6">    
+                <Link
+                    href="/dashboard/create/hero"
+                    className="p-4 bg-aquamarine text-azure rounded-lg flex flex-col flex-wrap justify-center items-center"
+                >
+                    Créer un Hero
+                </Link>
+                <Link
+                    href="/dashboard/create/superpower"
+                    className="p-4 bg-aquamarine text-azure rounded-lg flex flex-col flex-wrap justify-center items-center"
+                >
+                    Créer un super pouvoir
+                </Link>
+                <Link
+                    href="/dashboard/create/vehicle"
+                    className="p-4 bg-aquamarine text-azure rounded-lg flex flex-col flex-wrap justify-center items-center"
+                >
+                    Créer un véhicule
+                </Link>
+            </div>
+            <h1 className="text-5xl text-aquamarine mt-7">Choisissez un hero</h1>
             <div
                 className="flex flex-row flex-wrap justify-start items-center gap-9"
             >
