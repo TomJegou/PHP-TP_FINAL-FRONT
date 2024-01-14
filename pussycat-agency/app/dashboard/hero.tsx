@@ -12,7 +12,7 @@ export default function Hero({
 }) {
     return (
         <Link
-            className="bg-plum w-[310px] h-[300px] rounded-lg flex flex-col justify-center items-center"
+            className="bg-plum w-[155px] h-[150px] rounded-lg flex flex-col justify-center items-center"
             href={`/dashboard/hero/${index}`}
         >
             <p>{hero.name}</p>
