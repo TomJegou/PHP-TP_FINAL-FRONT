@@ -4,7 +4,7 @@ export default function Home() {
     return(
         <div className="flex flex-wrap flex-col justify-center items-center gap-[10vh]">
             <h1
-                className="home-title text-aquamarine text-7xl"
+                className="home-title text-aquamarine text-7xl mt-64"
             >
                 PUSSYCAT AGENCY
             </h1>
