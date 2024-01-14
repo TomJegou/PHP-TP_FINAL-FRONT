@@ -1,4 +1,4 @@
-import Hero from "./hero"
+import HeroCard from "./hero"
 
 async function getHeroes() {
     let apiHostname = "localhost:8000" 
@@ -21,13 +21,18 @@ export default async function Dashboard () {
     const data = await getHeroes()
     return (
         <div
-            className="flex flex-row flex-wrap justify-start items-center gap-9"
+            className="flex flex-col flex-wrap justify-start items-center gap-9"
         >
-            {
-                data.data.map((hero : {"name": string, "description": string}, index : number) => (
-                    <Hero hero={hero} key={index} index={index} />
-                ))
-            }
+            <h1 className="text-5xl text-aquamarine">Choisissez un hero</h1>
+            <div
+                className="flex flex-row flex-wrap justify-start items-center gap-9"
+            >
+                {
+                    data.data.map((hero : {"name": string, "description": string}, index : number) => (
+                        <HeroCard hero={hero} key={index} index={index} />
+                    ))
+                }
+            </div>
         </div>
     )
 }

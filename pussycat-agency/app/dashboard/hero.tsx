@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Hero({
+export default function HeroCard({
     hero,
     index,
 }: {
@@ -15,7 +15,11 @@ export default function Hero({
             className="bg-plum w-[155px] h-[150px] rounded-lg flex flex-col justify-center items-center"
             href={`/dashboard/hero/${index}`}
         >
-            <p>{hero.name}</p>
+            <p
+                className="text-azure text-2xl"
+            >
+                {hero.name}
+            </p>
         </Link>
     )
 }
