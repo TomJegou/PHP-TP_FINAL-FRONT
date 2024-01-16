@@ -12,11 +12,11 @@ export default function HeroCard({
 }) {
     return (
         <Link
-            className="card-hero bg-plum w-[155px] h-[150px] rounded-lg flex flex-col justify-center items-center"
+            className="card-hero bg-plum w-[175px] h-[175px] rounded-lg flex flex-col justify-center items-center"
             href={`/dashboard/hero/${index}`}
         >
             <p
-                className="text-azure text-2xl"
+                className="text-azure text-2xl flex flex-row justify-center items-center flex-wrap w-full p-4"
             >
                 {hero.name}
             </p>
