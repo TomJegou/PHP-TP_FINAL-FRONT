@@ -1,3 +1,5 @@
+import HomeButton from "@/app/home-button"
+
 export default async function CreateHero() {
     async function submitForm( formData: FormData ) {
         'use server'
@@ -18,6 +20,7 @@ export default async function CreateHero() {
 
     return (
         <div className="flex flex-wrap flex-col justify-center items-center mt-12 gap-10">
+            <HomeButton />
             <h1 className="text-5xl text-aquamarine">Créer un super Hero</h1>
             <form
                 className="flex flex-col justify-center items-center gap-12"
