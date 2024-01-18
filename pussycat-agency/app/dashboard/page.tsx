@@ -1,4 +1,5 @@
 import HomeButton from "../home-button"
+import SignOutButton from "../sign-out/SignOutButton"
 import HeroCard from "./hero"
 import Link from "next/link"
 
@@ -25,6 +26,7 @@ export default async function Dashboard () {
         <div
             className="flex flex-col flex-wrap justify-start items-center gap-9 w-[95vw]"
         >
+            <SignOutButton />
             <HomeButton />
             <div className="w-[100vw] h-24 flex flex-row flex-wrap justify-center items-center gap-6">    
                 <Link
