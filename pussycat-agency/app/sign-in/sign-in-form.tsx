@@ -1,8 +1,35 @@
 import Link from "next/link"
+import { redirect } from "next/navigation"
+import { cookies } from "next/headers"
 
-export default function LoginForm() {
+export default async function LoginForm() {
+    async function submitForm(formData: FormData) {
+        'use server'
+        let apiHostname = "localhost:8000"
+        if (process.env.API_HOSTNAME != undefined) {
+            apiHostname = process.env.API_HOSTNAME
+        }
+        const resp = await fetch(`http://${apiHostname}/api/connect`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "email": formData.get("email"),
+                "password": formData.get("password"),
+            })
+        })
+        if (!resp.ok) {
+            console.log("Error")
+        } else {
+            let payloadResponse = await resp.json()
+            cookies().set("API_TOKEN", payloadResponse["cookie"])
+            redirect("/dashboard")
+        }
+    }
+
     return (
-        <form className="bg-aquamarine border-[2px] border-solid w-[85vw] max-w-[500px] h-[60vh] max-h-[600px] rounded-xl flex flex-wrap flex-col justify-center items-center gap-6">
+        <form className="bg-aquamarine border-[2px] border-solid w-[85vw] max-w-[500px] h-[60vh] max-h-[600px] rounded-xl flex flex-wrap flex-col justify-center items-center gap-6" action={submitForm}>
             <h2 className="text-3xl font-bold">Se connecter</h2>
             <div className="w-full flex flex-col justify-center items-center gap-5">
                 <div className="wrapper-input-text-login">
