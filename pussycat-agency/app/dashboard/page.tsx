@@ -28,7 +28,6 @@ export default async function Dashboard () {
     }
     const data = await getHeroes()
 
-
     return (
         <div
             className="flex flex-col flex-wrap justify-start items-center gap-9 w-[95vw]"

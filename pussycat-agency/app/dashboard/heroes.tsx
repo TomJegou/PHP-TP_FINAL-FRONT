@@ -2,7 +2,7 @@
 import HeroCard from "./heroCard"
 import { useState, useEffect } from "react"
 
-export default function Heroes({ data }: { data: { "data": {"name": string, "description": string}[] } }) {
+export default function Heroes({ data }: { data: { "data": {"name": string, "id": number}[] } }) {
     const [ value, setValue ] = useState("")
     useEffect(()=>{
         console.log(value)
@@ -23,12 +23,12 @@ export default function Heroes({ data }: { data: { "data": {"name": string, "des
                 className="flex flex-row flex-wrap justify-start items-center gap-9"
             >
                 {
-                    data.data.map((hero : {"name": string, "description": string}, index : number) => {
+                    data.data.map((hero: {"name": string, "id": number}) => {
                         if (value == "") {
-                            return <HeroCard hero={hero} key={index} index={index} />
+                            return <HeroCard hero={hero} key={hero.id} />
                         } else {
                             if (hero.name.toLowerCase().includes(value)) {
-                                return <HeroCard hero={hero} key={index} index={index} />
+                                return <HeroCard hero={hero} key={hero.id} />
                             }
                         }
                     })
