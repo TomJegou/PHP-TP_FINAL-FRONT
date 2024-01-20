@@ -1,5 +1,5 @@
 'use client'
-import HeroCard from "./hero"
+import HeroCard from "./heroCard"
 import { useState, useEffect } from "react"
 
 export default function Heroes({ data }: { data: { "data": {"name": string, "description": string}[] } }) {
