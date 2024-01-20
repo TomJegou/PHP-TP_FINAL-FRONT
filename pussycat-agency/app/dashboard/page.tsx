@@ -2,6 +2,8 @@ import HomeButton from "../home-button"
 import SignOutButton from "../sign-out/SignOutButton"
 import HeroCard from "./hero"
 import Link from "next/link"
+import { cookies } from "next/headers"
+import { redirect } from "next/navigation"
 
 async function getHeroes() {
     let apiHostname = "localhost:8000" 
@@ -21,6 +23,9 @@ async function getHeroes() {
 }
 
 export default async function Dashboard () {
+    if (cookies().get("API_TOKEN") == undefined) {
+        redirect("/")
+    }
     const data = await getHeroes()
     return (
         <div
