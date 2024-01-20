@@ -24,7 +24,7 @@ export default async function Hero({
     }
     const hero = await getHero(params.id_hero)
     return (
-        <div>
+        <div className="flex flex-col justify-center items-center min-h-screen">
             <HeroComponent hero={hero.data} />
         </div>
     )
