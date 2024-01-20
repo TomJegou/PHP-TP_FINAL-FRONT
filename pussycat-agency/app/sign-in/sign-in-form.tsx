@@ -23,7 +23,7 @@ export default async function LoginForm() {
             console.log("Error")
         } else {
             let payloadResponse = await resp.json()
-            cookies().set("API_TOKEN", payloadResponse["cookie"])
+            cookies().set("API_TOKEN", payloadResponse["api_token"])
             redirect("/dashboard")
         }
     }
