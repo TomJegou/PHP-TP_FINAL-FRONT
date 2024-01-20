@@ -1,9 +1,9 @@
 import HomeButton from "../home-button"
 import SignOutButton from "../sign-out/SignOutButton"
-import HeroCard from "./hero"
 import Link from "next/link"
-import { cookies } from "next/headers"
+import Heroes from "./heroes"
 import { redirect } from "next/navigation"
+import { cookies } from "next/headers"
 
 async function getHeroes() {
     let apiHostname = "localhost:8000" 
@@ -17,7 +17,7 @@ async function getHeroes() {
         cache: "no-store"
     })
     if (!res.ok) {
-        console.log("Error fetching /api/gethero")
+        redirect("/")
     }
     return res.json()
 }
@@ -27,6 +27,8 @@ export default async function Dashboard () {
         redirect("/")
     }
     const data = await getHeroes()
+
+
     return (
         <div
             className="flex flex-col flex-wrap justify-start items-center gap-9 w-[95vw]"
@@ -54,15 +56,7 @@ export default async function Dashboard () {
                 </Link>
             </div>
             <h1 className="text-5xl text-aquamarine mt-7">Choisissez un hero</h1>
-            <div
-                className="flex flex-row flex-wrap justify-start items-center gap-9"
-            >
-                {
-                    data.data.map((hero : {"name": string, "description": string}, index : number) => (
-                        <HeroCard hero={hero} key={index} index={index} />
-                    ))
-                }
-            </div>
+            <Heroes data={data} />
         </div>
     )
 }
