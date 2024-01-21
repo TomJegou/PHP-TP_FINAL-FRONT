@@ -29,11 +29,10 @@ export default async function CreateHero() {
             })
             if (!response.ok) {
                 console.log("Error")
-                let a = await response.json()
-                console.log(a)
             }
             let a = await response.json()
             console.log(a)
+            redirect("/dashboard")
         } else {
             redirect("/")
         }
