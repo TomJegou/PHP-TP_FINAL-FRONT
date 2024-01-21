@@ -22,10 +22,10 @@ export default function HeroComponent({
             "id": number,
             "name": string
         }[],
-        "gadget": {
+        "gadgets": {
             "id": number,
             "name": string,
-        },
+        }[],
     }
 }) {
     return (
@@ -64,8 +64,14 @@ export default function HeroComponent({
                         ))
                     }
                 </div>
-                <div className="" key={hero.gadget.id}>
-                    {hero.gadget.name}
+                <div className="flex flex-row flex-wrap justify-center items-center gap-5">
+                    {
+                        hero.gadgets.map((gadget: {"id": number, "name": string}) => (
+                            <div className="" key={gadget.id}>
+                                {gadget.name}
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
