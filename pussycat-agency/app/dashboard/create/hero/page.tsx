@@ -1,3 +1,7 @@
+import HomeButton from "@/app/home-button"
+import { cookies } from "next/headers"
+import { redirect } from "next/navigation"
+
 export default async function CreateHero() {
     async function submitForm( formData: FormData ) {
         'use server'
@@ -13,11 +17,31 @@ export default async function CreateHero() {
             "origin_planet": formData.get("origin_planet"),
             "description": formData.get("description"),
         }
-        console.log(payload)
+        let apiToken = cookies().get("API_TOKEN")?.value
+        if (apiToken != null) {
+            const response = await fetch(`http://${apiHostname}/api/hero`, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "API_TOKEN": apiToken,
+                },
+                body: JSON.stringify(payload),
+            })
+            if (!response.ok) {
+                console.log("Error")
+                let a = await response.json()
+                console.log(a)
+            }
+            let a = await response.json()
+            console.log(a)
+        } else {
+            redirect("/")
+        }
     }
 
     return (
         <div className="flex flex-wrap flex-col justify-center items-center mt-12 gap-10">
+            <HomeButton />
             <h1 className="text-5xl text-aquamarine">Créer un super Hero</h1>
             <form
                 className="flex flex-col justify-center items-center gap-12"

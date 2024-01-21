@@ -1,6 +1,11 @@
 import Link from "next/link"
+import { redirect } from "next/navigation"
+import { cookies } from "next/headers"
 
 export default function Home() {
+    if (cookies().get("API_TOKEN") != undefined) {
+        redirect("/dashboard")
+    }
     return(
         <div className="flex flex-wrap flex-col justify-center items-center gap-[10vh]">
             <h1

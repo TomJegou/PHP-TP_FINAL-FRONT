@@ -6,10 +6,15 @@ export const metadata: Metadata = {
   description: '',
 }
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({
+  children,
+}:
+{
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body className='bg-outer-space flex flex-wrap flex-col justify-start items-center min-h-screen'>{children}</body>
+      <body className='bg-outer-space flex flex-wrap flex-col justify-start items-center min-h-screen overflow-x-hidden'>{children}</body>
     </html>
   )
 }
