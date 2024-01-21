@@ -23,6 +23,10 @@ export default async function LoginForm() {
             console.log("Error")
         } else {
             let payloadResponse = await resp.json()
+            console.log(payloadResponse)
+            if (payloadResponse["code"] != "200") {
+                redirect("/sign-in")
+            }
             cookies().set("API_TOKEN", payloadResponse["api_token"])
             redirect("/dashboard")
         }
