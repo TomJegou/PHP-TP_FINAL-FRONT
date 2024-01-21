@@ -14,7 +14,7 @@ async function getHeroes() {
         method: 'GET',
         headers: {},
         body: null,
-        cache: "no-store"
+        cache: "no-cache"
     })
     if (!res.ok) {
         redirect("/")
