@@ -7,7 +7,6 @@ export default async function SignOut() {
   async function deleteTokens() {
     "use server"
     cookies().delete("API_TOKEN")
-    redirect("/")
   }
 
   return <SignOutAction deleteTokens={deleteTokens} />;
