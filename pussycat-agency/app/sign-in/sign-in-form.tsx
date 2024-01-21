@@ -38,7 +38,7 @@ export default async function LoginForm() {
                 </div>
                 <div className="wrapper-input-text-login">    
                     <label>Mot de passe</label>
-                    <input type="text" className="input-text-login" name="password" />
+                    <input type="password" className="input-text-login" name="password" />
                 </div>
             </div>
             <input
